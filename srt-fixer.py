@@ -14,7 +14,7 @@ args = parser.parse_args()
 
 with open(args.fname,newline='') as ifp: #άνοιγμα του αρχείου srt	
 	for line in ifp:
-		line = line.strip()	
+		line = line.strip() #πως χωρίζονται οι γραμμές	
 		match = re.search(r'^(\d+:\d+:\d+,\d+)\s+--\>\s+(\d+:\d+:\d+,\d+)', line)
                 if match:
                     sys.write("%s --> %s\n" % (
